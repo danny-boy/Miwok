@@ -7,8 +7,4 @@
     android:id="@+id/list"
     tools:context="com.example.android.miwok.NumbersActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
 </ListView>
