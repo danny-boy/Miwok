@@ -1,5 +1,6 @@
 package com.example.android.miwok;
 
+import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -11,14 +12,17 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Daniel on 11/6/2017.
  */
 
 public class WordAdapter extends ArrayAdapter<Word>{
 
-    public WordAdapter(@NonNull Context context, int resource) {
-        super(context, resource);
+    public WordAdapter(Activity context, ArrayList<Word> words) {
+        super(context, 0 , words);
     }
 
     @NonNull
@@ -39,5 +43,7 @@ public class WordAdapter extends ArrayAdapter<Word>{
 
         return listItemView;
     }
+
+
 
 }

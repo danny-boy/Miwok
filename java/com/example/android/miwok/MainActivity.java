@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openNumbersList(View view){
-        // TODO: 10/26/2017
         //setContentView(R.layout.activity_numbers);
         Intent i = new Intent(this, NumbersActivity.class);
         startActivity(i);
