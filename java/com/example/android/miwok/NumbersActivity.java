@@ -39,7 +39,7 @@ public class NumbersActivity extends AppCompatActivity {
 
         WordAdapter adapter = new WordAdapter(this, words);
 
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = (ListView) findViewById(R.id.numbers_list);
 
         listView.setAdapter(adapter);
 

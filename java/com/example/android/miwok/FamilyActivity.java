@@ -11,33 +11,26 @@ public class FamilyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_family_members);
-    }
+
 
     ArrayList<Word> words = new ArrayList<Word>();
 
-//        // Could be created this way...
-//        Word w = new Word("one","lutti");
-//        words.add(w);
-//
-//        // ... But this way is faster
-//
-
-        words.add(new Word("one", "lutti"));
-        words.add(new Word("two", "otiiko"));
-        words.add(new Word("three", "tolookosu"));
-        words.add(new Word("four", "oyyisa"));
-        words.add(new Word("five", "massokka"));
-        words.add(new Word("six", "temmokka"));
-        words.add(new Word("seven", "kenekaku"));
-        words.add(new Word("eight", "kawinta"));
-        words.add(new Word("nine", "wo'e"));
-        words.add(new Word("ten", "na'aacha"));
+        words.add(new Word("father", "\u04D9p\u04D9"));
+        words.add(new Word("mother", "eta"));
+        words.add(new Word("son", "angsi"));
+        words.add(new Word("daughter", "tune"));
+        words.add(new Word("older brother", "taachi"));
+        words.add(new Word("younger brother", "chalitti"));
+        words.add(new Word("older sister", "tete"));
+        words.add(new Word("younger sister", "kolliti"));
+        words.add(new Word("grandmother", "ama"));
+        words.add(new Word("grandfather", "paapa"));
 
     WordAdapter adapter = new WordAdapter(this, words);
 
-    ListView listView = (ListView) findViewById(R.id.list);
+    ListView listView = (ListView) findViewById(R.id.family_list);
 
         listView.setAdapter(adapter);
-
+    }
 }
 
