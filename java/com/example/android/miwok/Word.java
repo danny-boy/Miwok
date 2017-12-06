@@ -9,12 +9,20 @@ public class Word {
     private String mMiwokTranslation;
     private String mDefaultTranslation;
     private int mImage = NO_IMAGE_PROVIDED;
+    private int mSound = NO_IMAGE_PROVIDED;
     public static final int NO_IMAGE_PROVIDED = -1;
 
     public Word(String defaultTranslation, String miwokTranlation, int image){
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranlation;
         mImage = image;
+    }
+
+    public Word(String defaultTranslation, String miwokTranlation, int image, int sound){
+        mDefaultTranslation = defaultTranslation;
+        mMiwokTranslation = miwokTranlation;
+        mImage = image;
+        mSound = sound;
     }
 
     public Word (String defaultTranslation, String miwokTranslation){
@@ -33,4 +41,6 @@ public class Word {
     }
 
     public int getImage(){return mImage;}
+
+    public int getSound(){return mSound;}
 }

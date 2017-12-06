@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.MediaController;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -24,11 +25,21 @@ import java.util.List;
 public class WordAdapter extends ArrayAdapter<Word>{
 
     int mRes;
+    int mSound;
 
     public WordAdapter(Activity context, ArrayList<Word> words, int resource) {
         super(context, 0 , words);
         mRes = resource;
     }
+
+//    int mRes;
+//    int mSound;
+//
+//    public WordAdapter(Activity context, ArrayList<Word> words, int resource, int sound) {
+//        super(context, 0 , words);
+//        mRes = resource;
+//        mSound = sound;
+//    }
 
     @NonNull
     @Override
@@ -55,6 +66,9 @@ public class WordAdapter extends ArrayAdapter<Word>{
         else {
             wordImage.setVisibility(View.GONE);
         }
+
+        MediaController playButton = (MediaController) listItemView.findViewById(R.id.audio_playback);
+        playButton.playSoundEffect(mSound);
 
         View textContainer = listItemView.findViewById(R.id.text_container);
         int color = ContextCompat.getColor(getContext(), mRes);
